@@ -11,7 +11,7 @@ setuptools.setup(
   description="A package for CartPole V0 problem using dqn",
   long_description=long_description,
   long_description_content_type="text/markdown",
-  url="https://github.com/AimAlex/CartPoleV0-dqn.git",
+  url="https://github.com/AimAlex/CartPoleV0DQN",
   packages=setuptools.find_packages(),
   install_requires=[
         'tensorflow==0.12.0',
