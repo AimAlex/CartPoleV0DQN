@@ -3,3 +3,5 @@ RUN apt update
 RUN apt install -y vim ssh python-opengl xvfb ffmpeg
 RUN pip install tensorflow==0.12.0 jupyterlab
 COPY ./cartpolev0-dqn.ipynb /root/cartpolev0dqn.ipynb
+
+WORKDIR /root
