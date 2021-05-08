@@ -186,7 +186,7 @@ class DQN():
                 if ave_reward >= 200:
                     break
     
-    def test(self, display=True):
+    def test(self, isDisplay=True):
         env = self.env
         total_reward = 0
         for i in xrange(16):
@@ -197,7 +197,7 @@ class DQN():
                 state,reward,done,_ = env.step(action)
                 total_reward += reward
                 
-                if display:
+                if isDisplay:
                     plt.figure(3)
                     plt.clf()
                     plt.imshow(env.render(mode='rgb_array'))
