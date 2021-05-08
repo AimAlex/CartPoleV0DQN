@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
   name="cartpolev0dqn",
-  version="0.1.0",
+  version="0.1.1",
   author="Jiangbei Li",
   author_email="lijiangbei@4paradigm.com",
   description="A package for CartPole V0 problem using dqn",

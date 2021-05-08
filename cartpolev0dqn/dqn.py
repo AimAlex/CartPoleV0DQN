@@ -186,7 +186,7 @@ class DQN():
                 if ave_reward >= 200:
                     break
     
-    def test(self):
+    def test(self, display=True):
         env = self.env
         total_reward = 0
         for i in xrange(16):
@@ -197,14 +197,16 @@ class DQN():
                 state,reward,done,_ = env.step(action)
                 total_reward += reward
                 
-                plt.figure(3)
-                plt.clf()
-                plt.imshow(env.render(mode='rgb_array'))
-                plt.title("Round %d: Step: %d" % (i, j))
-                plt.axis('off')
+                if display:
+                    plt.figure(3)
+                    plt.clf()
+                    plt.imshow(env.render(mode='rgb_array'))
+                    plt.title("Round %d: Step: %d" % (i, j))
+                    plt.axis('off')
 
-                display.clear_output(wait=True)
-                display.display(plt.gcf())
+                    display.display(plt.gcf())
+                    display.clear_output(wait=True)
+                    
                 if done:
                     break
         ave_reward = total_reward / 16
